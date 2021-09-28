@@ -7,6 +7,8 @@ const buttElementOne = document.querySelectorAll(".btn");
 const buttElementTwo = document.querySelectorAll(".btn");
 const DestinationP = document.querySelector(".content-destination p");
 const h4 = document.querySelector('h4');
+const hTwo = document.querySelector('.content-section, .inverse-content, .text-content h2')
+const textP = document.querySelector(".text-content p");
 
 // LOGO CHAGES COLOR TO RED FOR 2 SECONDS AND THEN GOES BACK
 logoheading.addEventListener('mouseover', function(event){
@@ -97,7 +99,7 @@ buttElementTwo[2].addEventListener("mouseout", event =>
     
 });
 
-// destination img background change changeing
+// destination img background changeing
 DestinationP.addEventListener("mouseover", () =>
 {
     DestinationP.style.backgroundColor = "yellow"; 
@@ -109,7 +111,7 @@ DestinationP.addEventListener("mouseout", () =>
 });
 
 //  h4 will change text
-// h4 text change  when mouse is near
+// h4 text change  and color near
 h4.addEventListener('mouseover', event =>
 {
     
@@ -121,4 +123,48 @@ h4.addEventListener('mouseout', event =>
     
     h4.textContent = "fun in the sun!";
     h4.style.backgroundColor = "white";   
+});
+
+// hTwo with color and text change for adventure awaits
+hTwo.addEventListener('mouseover', event =>
+{
+    
+    hTwo.textContent = "would you rather go to paris,or tailand";    
+    hTwo.style.backgroundColor = "blue";
+});
+hTwo.addEventListener('mouseout', event =>
+{
+    
+    hTwo.textContent = "Adventure Awaits";
+    hTwo.style.backgroundColor = "white";  
+     
+});
+//<p> Adventure webdesign pretty
+var fSize = '2.8px';
+var normaSize = "1.5px";
+textP.addEventListener('mouseover', event =>
+{
+    
+    textP.textContent = "some lorem ipsum for";    
+    textP.style.backgroundColor = "blue";
+    textP.style.fontSize = fSize;
+});
+textP.addEventListener("mouseout", () =>
+{
+    textP.textContent = "Adventure webdesign pretty design design, excursion cute WordPress blogger design webdesign adventure. Pretty simple traveling fun WordPress wanderlust darn simple organized Expedition colorful design simple excursion blogger blogger design WordPress design, design organized website theme.";
+    textP.style.fontSize = normaSize;
+    textP.style.backgroundColor = "white";
+});
+textP.addEventListener('click',function(event){
+    console.log('look no morr events fireing off');
+    event.stopPropagation();
+});
+
+buttElementZero[0].addEventListener('click',function(event){
+    console.log('look no morr events fireing off');
+    event.stopPropagation();
+});
+headerImg.addEventListener('click',function(event){
+    console.log('look no morr events fireing off');
+    event.stopPropagation();
 });
